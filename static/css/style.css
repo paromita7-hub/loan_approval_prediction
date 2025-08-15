@@ -1,0 +1,60 @@
+/* Body setup */
+body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8ee37; /* fallback yellow if image not loaded */
+    
+}
+
+/* Full-page container */
+.container {
+    width: 100%;
+    height: 100vh; /* full viewport height */
+    background: url('../images/background.jpg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff; /* text color inside container */
+    padding: 0; /* remove extra padding */
+    border-radius: 0; /* remove rounded corners */
+    box-shadow: none; /* remove shadow */
+}
+
+/* Optional: form styling inside container */
+form {
+    width: 100%;
+    max-width: 600px;
+    background-color: rgba(0,0,0,0.5); /* semi-transparent for readability */
+    padding: 90px 20px 30px 20px; /* extra top padding */
+    border-radius: 10px;
+}
+
+
+h1 {
+    color: #070808;
+    font-weight: bold;
+}
+h3 {
+    color: #070808;
+    font-weight: bold;
+}
+h4 {
+    color: #fefefe;
+    border-bottom: 1px solid rgb(0, 0, 2);
+    padding-bottom: 5px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    font-size: 1.1rem;
+}
+
+.alert-info {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
