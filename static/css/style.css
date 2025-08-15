@@ -1,50 +1,81 @@
-/* Body setup */
-body, html {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f8ee37; /* fallback yellow if image not loaded */
-    
+/* Remove default margins/padding and make body/html full size */
+.header {
+    margin-top: 10px; /* spacing from top */
 }
 
-/* Full-page container */
-.container {
+.company-name {
+    margin-top: 0px;
+    font-size: 3rem;       /* big, bold company name */
+    font-weight: 700;
+    color: #333434;        /* dark color for name */
+    margin-bottom: 0px;   /* small spacing to tagline */
+}
+
+.tagline {
+    font-size: 1.5rem;     /* smaller than company name */
+    font-weight: 400;      /* lighter than name */
+    color: #42413f;        /* highlight color for tagline */
+    font-style: italic;    /* optional for elegance */
+    margin-top: 0;
+    margin-bottom: 50;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
     width: 100%;
-    height: 100vh; /* full viewport height */
-    background: url('../images/background.jpg') no-repeat center center;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff; /* text color inside container */
-    padding: 0; /* remove extra padding */
-    border-radius: 0; /* remove rounded corners */
-    box-shadow: none; /* remove shadow */
+}
+
+/* Background image fills entire viewport */
+body {
+    background-image: url('../images/background.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;   /* makes image cover full screen */
+    background-attachment: fixed; /* keeps image fixed while scrolling */
+}
+
+/* Optional: make container centered with transparency */
+.container {
+    background-image: url('../images/background.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;   /* makes image cover full screen */
+    background-attachment: fixed;
+    background-color: rgba(255, 255, 255, 0.2); /* semi-transparent so image shows behind */
+    width: 90%;
+    max-width: 800px;
+    margin: 10px auto; /* centers container vertically with some top/bottom spacing */
+    padding: 30px;
+    border-radius: 10px;
+    box-sizing: border-box;
 }
 
 /* Optional: form styling inside container */
 form {
     width: 100%;
     max-width: 600px;
+    margin: auto;
     background-color: rgba(0,0,0,0.5); /* semi-transparent for readability */
-    padding: 90px 20px 30px 20px; /* extra top padding */
+    padding: 30px 20px 30px 20px; /* extra top padding */
     border-radius: 10px;
+    box-sizing: border-box;
+}
+label {
+    color: #f5f4f3;  
+    font-weight: normal; 
+    font-size: 16px;   /* optional: adjust size */
 }
 
 
-h1 {
-    color: #070808;
-    font-weight: bold;
-}
 h3 {
     color: #070808;
     font-weight: bold;
 }
 h4 {
     color: #fefefe;
-    border-bottom: 1px solid rgb(0, 0, 2);
+    border-bottom: 1px solid rgb(254, 254, 254);
     padding-bottom: 5px;
 }
 
@@ -58,3 +89,17 @@ h4 {
     font-size: 1.2rem;
     font-weight: bold;
 }
+
+footer {
+    width: 100%;
+    text-align: center;           /* center the text */
+    background-color: rgba(0, 0, 0, 0.7); /* semi-transparent dark background */
+    color: #ffffff;               /* white text */
+    padding: 10px 0;              /* top/bottom padding */
+    
+    bottom: 0;                    /* bottom of viewport */
+    left: 0;
+    font-size: 14px;
+    z-index: 1000;                /* stays above other elements */
+}
+
